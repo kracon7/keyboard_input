@@ -29,7 +29,9 @@ main(int argc, char** argv)
   ros::init(argc, argv, "keyboard_pub");
   ros::NodeHandle n;
 
-  keyboard_pub = n.advertise<std_msgs::Int32>("arduino_blue/keyboard_pub", 1);
+  // keyboard_pub = n.advertise<std_msgs::Int32>("arduino_blue/keyboard_pub", 1);
+
+  keyboard_pub = n.advertise<std_msgs::Int32>("keyboard_pub", 1);
 
   while (ros::ok())
   {
